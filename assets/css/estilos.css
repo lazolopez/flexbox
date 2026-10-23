@@ -217,7 +217,7 @@ ul.galeria {
             overflow: hidden;
 
             &::before {
-                transition: transform 0.2 ease;
+                transition: transform 0.2s ease;
             }
 
             &:hover::before {
