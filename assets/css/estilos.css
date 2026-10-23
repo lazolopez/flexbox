@@ -19,6 +19,26 @@
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
     --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
 
+    --galeria-1--large: url("../img/freedom-photopea 900px.webp");
+    --galeria-1--medium: url("../img/freedom-photopea 600px.webp");
+    --galeria-1--thumb: url("../img/freedom-photopea 300px.webp");
+
+    --galeria-2--large: url("../img/kuala-lumpur-photopea 900px.webp");
+    --galeria-2--medium: url("../img/kuala-lumpur-photopea 600px.webp");
+    --galeria-2--thumb: url("../img/kuala-lumpur-photopea 300px.webp");
+
+    --galeria-3--large: url("../img/dome-photopea\ 900px.webp");
+    --galeria-3--medium: url("../img/dome-photopea\ 600px.webp");
+    --galeria-3--thumb: url("../img/dome-photopea\ 300px.webp");
+
+    --galeria-4--large: url("../img/chicago-photopea\ 900px.webp");
+    --galeria-4--medium: url("../img/chicago-photopea\ 600px.webp");
+    --galeria-4--thumb: url("../img/chicago-photopea\ 300px.webp");
+
+    --galeria-5--large: url("../img/blue-sky-photopea\ 900px.webp");
+    --galeria-5--medium: url("../img/blue-sky-photopea\ 600px.webp");
+    --galeria-5--thumb: url("../img/blue-sky-photopea\ 300px.webp");
+
     --logo-url: url(../svg/dangtalogo.svg);
     --logo-ratio: 248/165;
     --marca-agua-h: 5rem;
@@ -234,36 +254,6 @@ ul.galeria figure.img-before {
     background-color: cornflowerblue;
 }
 
-.diapositiva-1 {
-    &::before {
-        background-image: var(--bg-img-galeria-1);
-    }
-}
-
-.diapositiva-2 {
-    &::before {
-        background-image: var(--bg-img-galeria-2);
-    }
-}
-
-.diapositiva-3 {
-    &::before {
-        background-image: var(--bg-img-galeria-3);
-    }
-}
-
-.diapositiva-4 {
-    &::before {
-        background-image: var(--bg-img-galeria-4);
-    }
-}
-
-.diapositiva-5 {
-    &::before {
-        background-image: var(--bg-img-galeria-5);
-    }
-}
-
 /* Smooth color + shadow on hover */
 .dl-transicion-color {
     width: 25vw;
@@ -375,5 +365,115 @@ ul.galeria figure.img-before {
 
     .boton::before {
         content: "Móvil: @media (max-width: 600px)";
+    }
+}
+article.galeria-flex {
+    background-color: lime;
+}
+ul.galeria {
+    & .diapositiva-1 {
+        &::before {
+            background-image: var(--galeria-1--thumb);
+        }
+    }
+
+    & .diapositiva-2 {
+        &::before {
+            background-image: var(--galeria-2--thumb);
+        }
+    }
+
+    & .diapositiva-3 {
+        &::before {
+            background-image: var(--galeria-3--thumb);
+        }
+    }
+
+    & .diapositiva-4 {
+        &::before {
+            background-image: var(--galeria-4--thumb);
+        }
+    }
+
+    & .diapositiva-5 {
+        &::before {
+            background-image: var(--galeria-5--thumb);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    article.galeria-flex {
+        background-color: tomato;
+    }
+
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--medium);
+            }
+        }
+
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--medium);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--medium);
+            }
+        }
+
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--medium);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--medium);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    article.galeria-flex {
+        background-color: blue;
+    }
+
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--large);
+            }
+        }
+
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--large);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--large);
+            }
+        }
+
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--large);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--large);
+            }
+        }
     }
 }
