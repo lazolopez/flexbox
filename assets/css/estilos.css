@@ -11,6 +11,41 @@
     --color-a: blue;
     --color-a--cover: red;
 
+    /* Imágenes obtenidas gracias a https://pixfill.dev/ */
+
+    --carrousel-1--origin: url("https://pixfill.dev/1920x1280/6A5ACD/ffffff");
+    --carrousel-1--large: url("https://pixfill.dev/1024x683/6A5ACD/ffffff");
+    --carrousel-1--medium-large: url("https://pixfill.dev/768x512/6A5ACD/ffffff");
+    --carrousel-1--medium: url("https://pixfill.dev/480x320/6A5ACD/ffffff");
+    --carrousel-1--thumb: url("https://pixfill.dev/300x200/6A5ACD/ffffff");
+
+    --carrousel-2--origin: url("https://pixfill.dev/1920x1280/6B8E23/ffffff");
+    --carrousel-2--large: url("https://pixfill.dev/1024x683/6B8E23/ffffff");
+    --carrousel-2--medium-large: url("https://pixfill.dev/768x512/6B8E23/ffffff");
+    --carrousel-2--medium: url("https://pixfill.dev/480x320/6B8E23/ffffff");
+    --carrousel-2--thumb: url("https://pixfill.dev/300x200/6B8E23/ffffff");
+
+    --carrousel-3--origin: url("https://pixfill.dev/1920x1280/B22222/ffffff");
+    --carrousel-3--large: url("https://pixfill.dev/1024x683/B22222/ffffff");
+    --carrousel-3--medium-large: url("https://pixfill.dev/768x512/B22222/ffffff");
+    --carrousel-3--medium: url("https://pixfill.dev/480x320/B22222/ffffff");
+    --carrousel-3--thumb: url("https://pixfill.dev/300x200/B22222/ffffff");
+
+    --carrousel-4--origin: url("https://pixfill.dev/1920x1280/BDB76B/ffffff");
+    --carrousel-4--large: url("https://pixfill.dev/1024x683/BDB76B/ffffff");
+    --carrousel-4--medium-large: url("https://pixfill.dev/768x512/BDB76B/ffffff");
+    --carrousel-4--medium: url("https://pixfill.dev/480x320/BDB76B/ffffff");
+    --carrousel-4--thumb: url("https://pixfill.dev/300x200/BDB76B/ffffff");
+
+    --carrousel-5--origin: url("https://pixfill.dev/1920x1280/808080/ffffff");
+    --carrousel-5--large: url("https://pixfill.dev/1024x683/808080/ffffff");
+    --carrousel-5--medium-large: url("https://pixfill.dev/768x512/808080/ffffff");
+    --carrousel-5--medium: url("https://pixfill.dev/480x320/808080/ffffff");
+    --carrousel-5--thumb: url("https://pixfill.dev/300x200/808080/ffffff");
+
+    --ratio-galeria: 3/2;
+    --h-carrousel: 50vh;
+
     /* Imagenes del sitio */
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
@@ -76,6 +111,77 @@ a {
     &:active::before {
         left: 0;
         right: 0;
+    }
+}
+
+.agua {
+    &::before {
+        /* 
+            --- Position: fixed;
+            --- Fija el elemento al viewport, no importa el elemento contenedor 
+        */
+        position: fixed;
+
+        content: "";
+        width: calc(var(--marca-agua-h) * var(--logo-ratio));
+        height: var(--marca-agua-h);
+        bottom: 2rem;
+        right: 2rem;
+
+        background-image: var(--logo-url);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        opacity: 0.2;
+    }
+}
+
+/*
+    --------------------------
+    --- Selectores de tipo --- 
+    --------------------------
+*/
+
+/* 
+    --- Class: Underline From Center ---
+        by Hover.css
+*/
+
+a:not(.no-border) {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: perspective(1px) translateZ(0);
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: var(--color-a--hover);
+
+        transition-property: left, right;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    &:focus,
+    &:target,
+    &:hover {
+        outline-width: 0;
+        color: var(--color-a--hover);
+
+        &::before {
+            left: 0;
+            right: 0;
+        }
     }
 }
 
@@ -203,6 +309,7 @@ header.portada {
 }
 
 .img-before {
+    background-color: #222;
     position: relative;
 
     &::before {
@@ -335,6 +442,25 @@ ul.galeria figure.img-before {
             &.scale {
                 transform: scale(1.5);
             }
+        }
+    }
+}
+
+article.carrousel-container {
+    min-height: 100vh;
+
+    & ul.carrousel {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+
+        & li figure {
+            background-color: lime;
+        }
+
+        & li figure.diapositiva-1::before {
+            background-image: var(--carrousel-1--thumb);
         }
     }
 }
