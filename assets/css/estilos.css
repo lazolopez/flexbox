@@ -451,6 +451,7 @@ article.carrousel-container {
 
     & ul.carrousel {
         display: flex;
+        width: 100%;
         height: 30vh;
         margin: 0;
         padding: 0;
@@ -693,6 +694,31 @@ ul.galeria {
         & .diapositiva-5 {
             &::before {
                 background-image: var(--galeria-5--large);
+            }
+        }
+    }
+}
+@media (min-width: 480px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1--medium);
+            }
+
+            & li li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2--medium);
+            }
+
+            & li li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3--medium);
+            }
+
+            & li li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4--medium);
+            }
+
+            & li li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5--medium);
             }
         }
     }
