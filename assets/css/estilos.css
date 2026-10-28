@@ -698,6 +698,15 @@ ul.galeria {
         }
     }
 }
+
+@media (orientation: landscape) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 60%;
+        }
+    }
+}
+
 @media (min-width: 480px) {
     article.carrousel-container {
         & ul.carrousel {
