@@ -142,8 +142,101 @@ span {
     color: var(--color-texto);
 }
 
+html {
+    font-size: 16px;
+
+    & body {
+        line-height: 1.6;
+    }
+    p,
+    ul,
+    ol,
+    li,
+    a {
+        font-size: var(--font-size-normal);
+    }
+}
+
+h2 {
+    font-size: var(--font-size-xxxl);
+}
+
 h3 {
+    font-size: var(--font-size-h3);
     color: var(--color-1);
+}
+.dl-transicion-color {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    background-color: steelblue;
+    background-image: url("images/carretera.png");
+    background-size: 100% 50%;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    box-shadow: none;
+
+    animation: leoCarretera 3s linear infinite;
+
+    span {
+        display: block;
+        width: 20vw;
+        height: 20vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: left 2s;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/Mi\ coche.png.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform-origin: 30% 50%;
+            rotate: 1deg;
+            transition: rotate 2s ease;
+        }
+    }
+    &:hover {
+        animation: daniConductor 1.2s linear infinite;
+    }
+
+    &:hover span {
+        left: calc(100% - 20vw);
+
+        &::after {
+            rotate: -1deg;
+        }
+    }
+}
+
+.dl-transicion-color {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    background-color: steelblue;
+    background-image: url(../img/cartoon-road.png);
+    background-size: 100% 50%;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    box-shadow: none;
+    animation: leoCarretera 3s linear infinite;
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-l);
+}
+
+h6 {
+    font-size: var(--font-size-m);
 }
 
 a {
