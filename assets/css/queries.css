@@ -1,0 +1,54 @@
+/* Texto generado por CSS */
+.boton::before {
+    content: "media (max-width: 599px)";
+}
+
+/* TABLETA: hasta 900 px */
+@media screen and (max-width: 900px) {
+    .boton {
+        background-color: #ffc107;
+        color: #222;
+    }
+
+    .boton::before {
+        content: "Tableta: @media (max-width: 900px)";
+    }
+}
+
+/* MÓVIL: hasta 600 px */
+@media screen and (max-width: 600px) {
+    .boton {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .boton::before {
+        content: "Móvil: @media (max-width: 600px)";
+    }
+}
+
+@media (min-width: 768px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1--medium-large);
+            }
+
+            & li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2--medium-large);
+            }
+
+            & li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3--medium-large);
+            }
+
+            & li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4--medium-large);
+            }
+
+            & li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5--medium-large);
+            }
+        }
+    }
+}

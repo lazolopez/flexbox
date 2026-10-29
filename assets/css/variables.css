@@ -1,0 +1,45 @@
+:root {
+    /* Imagenes del sitio */
+    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
+    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
+    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+    --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
+
+    --galeria-1--large: url("../img/freedom-photopea 900px.webp");
+    --galeria-1--medium: url("../img/freedom-photopea 600px.webp");
+    --galeria-1--thumb: url("../img/freedom-photopea 300px.webp");
+
+    --galeria-2--large: url("../img/kuala-lumpur-photopea 900px.webp");
+    --galeria-2--medium: url("../img/kuala-lumpur-photopea 600px.webp");
+    --galeria-2--thumb: url("../img/kuala-lumpur-photopea 300px.webp");
+
+    --galeria-3--large: url("../img/dome-photopea\ 900px.webp");
+    --galeria-3--medium: url("../img/dome-photopea\ 600px.webp");
+    --galeria-3--thumb: url("../img/dome-photopea\ 300px.webp");
+
+    --galeria-4--large: url("../img/chicago-photopea\ 900px.webp");
+    --galeria-4--medium: url("../img/chicago-photopea\ 600px.webp");
+    --galeria-4--thumb: url("../img/chicago-photopea\ 300px.webp");
+
+    --galeria-5--large: url("../img/blue-sky-photopea\ 900px.webp");
+    --galeria-5--medium: url("../img/blue-sky-photopea\ 600px.webp");
+    --galeria-5--thumb: url("../img/blue-sky-photopea\ 300px.webp");
+
+    --logo-url: url(../svg/dangtalogo.svg);
+    --logo-ratio: 248/165;
+    --marca-agua-h: 5rem;
+
+    /* Colores del sitio */
+    --color-1: red;
+    --color-2: blue;
+    --color-3: green;
+    --color-4: pink;
+
+    --color-texto: #666;
+    --bg-body: #fefefe;
+
+    --color-a: blue;
+    --color-a--cover: red;
+}

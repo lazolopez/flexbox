@@ -1,83 +1,40 @@
-:root {
-    /* Colores del sitio */
-    --color-1: red;
-    --color-2: blue;
-    --color-3: green;
-    --color-4: pink;
+/* a:not(.no-border) {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
 
-    --color-texto: #666;
-    --bg-body: #fefefe;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: perspective(1px) translateZ(0);
 
-    --color-a: blue;
-    --color-a--cover: red;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: var(--color-a--hover);
 
-    /* Imágenes obtenidas gracias a https://pixfill.dev/ */
+        transition-property: left, right;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
 
-    --carrousel-1--origin: url("https://pixfill.dev/1920x1280/6A5ACD/ffffff");
-    --carrousel-1--large: url("https://pixfill.dev/1024x683/6A5ACD/ffffff");
-    --carrousel-1--medium-large: url("https://pixfill.dev/768x512/6A5ACD/ffffff");
-    --carrousel-1--medium: url("https://pixfill.dev/480x320/6A5ACD/ffffff");
-    --carrousel-1--thumb: url("https://pixfill.dev/300x200/6A5ACD/ffffff");
+    &:focus,
+    &:target,
+    &:hover {
+        outline-width: 0;
+        color: var(--color-a--hover);
 
-    --carrousel-2--origin: url("https://pixfill.dev/1920x1280/6B8E23/ffffff");
-    --carrousel-2--large: url("https://pixfill.dev/1024x683/6B8E23/ffffff");
-    --carrousel-2--medium-large: url("https://pixfill.dev/768x512/6B8E23/ffffff");
-    --carrousel-2--medium: url("https://pixfill.dev/480x320/6B8E23/ffffff");
-    --carrousel-2--thumb: url("https://pixfill.dev/300x200/6B8E23/ffffff");
+        &::before {
+            left: 0;
+            right: 0;
+        }
+    }
+} */
 
-    --carrousel-3--origin: url("https://pixfill.dev/1920x1280/B22222/ffffff");
-    --carrousel-3--large: url("https://pixfill.dev/1024x683/B22222/ffffff");
-    --carrousel-3--medium-large: url("https://pixfill.dev/768x512/B22222/ffffff");
-    --carrousel-3--medium: url("https://pixfill.dev/480x320/B22222/ffffff");
-    --carrousel-3--thumb: url("https://pixfill.dev/300x200/B22222/ffffff");
-
-    --carrousel-4--origin: url("https://pixfill.dev/1920x1280/BDB76B/ffffff");
-    --carrousel-4--large: url("https://pixfill.dev/1024x683/BDB76B/ffffff");
-    --carrousel-4--medium-large: url("https://pixfill.dev/768x512/BDB76B/ffffff");
-    --carrousel-4--medium: url("https://pixfill.dev/480x320/BDB76B/ffffff");
-    --carrousel-4--thumb: url("https://pixfill.dev/300x200/BDB76B/ffffff");
-
-    --carrousel-5--origin: url("https://pixfill.dev/1920x1280/808080/ffffff");
-    --carrousel-5--large: url("https://pixfill.dev/1024x683/808080/ffffff");
-    --carrousel-5--medium-large: url("https://pixfill.dev/768x512/808080/ffffff");
-    --carrousel-5--medium: url("https://pixfill.dev/480x320/808080/ffffff");
-    --carrousel-5--thumb: url("https://pixfill.dev/300x200/808080/ffffff");
-
-    --ratio-galeria: 3/2;
-    --h-carrousel: 50vh;
-
-    /* Imagenes del sitio */
-    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
-    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
-    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
-    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
-    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
-    --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
-
-    --galeria-1--large: url("../img/freedom-photopea 900px.webp");
-    --galeria-1--medium: url("../img/freedom-photopea 600px.webp");
-    --galeria-1--thumb: url("../img/freedom-photopea 300px.webp");
-
-    --galeria-2--large: url("../img/kuala-lumpur-photopea 900px.webp");
-    --galeria-2--medium: url("../img/kuala-lumpur-photopea 600px.webp");
-    --galeria-2--thumb: url("../img/kuala-lumpur-photopea 300px.webp");
-
-    --galeria-3--large: url("../img/dome-photopea\ 900px.webp");
-    --galeria-3--medium: url("../img/dome-photopea\ 600px.webp");
-    --galeria-3--thumb: url("../img/dome-photopea\ 300px.webp");
-
-    --galeria-4--large: url("../img/chicago-photopea\ 900px.webp");
-    --galeria-4--medium: url("../img/chicago-photopea\ 600px.webp");
-    --galeria-4--thumb: url("../img/chicago-photopea\ 300px.webp");
-
-    --galeria-5--large: url("../img/blue-sky-photopea\ 900px.webp");
-    --galeria-5--medium: url("../img/blue-sky-photopea\ 600px.webp");
-    --galeria-5--thumb: url("../img/blue-sky-photopea\ 300px.webp");
-
-    --logo-url: url(../svg/dangtalogo.svg);
-    --logo-ratio: 248/165;
-    --marca-agua-h: 5rem;
-}
 /* Underline From Center */
 .dangtalogo-underline,
 a {
@@ -114,6 +71,17 @@ a {
     }
 }
 
+/*
+    --------------------------
+    --- Selectores de tipo --- 
+    --------------------------
+*/
+
+/* 
+    --- Class: Underline From Center ---
+        by Hover.css
+*/
+
 .agua {
     &::before {
         /* 
@@ -134,54 +102,6 @@ a {
         background-size: contain;
 
         opacity: 0.2;
-    }
-}
-
-/*
-    --------------------------
-    --- Selectores de tipo --- 
-    --------------------------
-*/
-
-/* 
-    --- Class: Underline From Center ---
-        by Hover.css
-*/
-
-a:not(.no-border) {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transform: perspective(1px) translateZ(0);
-
-    &::before {
-        position: absolute;
-        content: "";
-        height: 2px;
-        z-index: -1;
-        left: 50%;
-        right: 50%;
-        bottom: 0;
-        background: var(--color-a--hover);
-
-        transition-property: left, right;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-    }
-
-    &:focus,
-    &:target,
-    &:hover {
-        outline-width: 0;
-        color: var(--color-a--hover);
-
-        &::before {
-            left: 0;
-            right: 0;
-        }
     }
 }
 
@@ -284,13 +204,6 @@ figure {
     }
 } */
 
-.img-before.portada {
-    height: 40vh;
-    &::before {
-        background-image: var(--bg-url-img-portada);
-    }
-}
-
 header.portada {
     background-color: blue;
     display: flex;
@@ -307,83 +220,6 @@ header.portada {
         color: #fff;
     }
 }
-
-.img-before {
-    background-color: #222;
-    position: relative;
-
-    &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-ul.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-between;
-
-    & li {
-        min-width: 20rem;
-        height: 15rem;
-        flex: 1;
-
-        & figure.img-before {
-            width: 100%;
-            height: 100%;
-
-            overflow: hidden;
-
-            &::before {
-                transition: transform 0.2s ease;
-            }
-
-            &:hover::before {
-                transform: scale(1.2);
-            }
-        }
-    }
-}
-
-ul.galeria figure.img-before {
-    position: relative;
-    height: 12rem;
-    width: 20rem;
-    background-color: cornflowerblue;
-}
-
-/* Smooth color + shadow on hover */
-.dl-transicion-color {
-    width: 25vw;
-    height: 25vw;
-    background-color: steelblue;
-    box-shadow: none;
-    transition:
-        background-color 2s ease,
-        width 2s ease,
-        box-shadow 2s ease;
-    &:hover {
-        width: 100%;
-        background-color: orange;
-        opacity: 1;
-        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        box-shadow: 1em 2em 1em rgba(0, 0, 0, 0.2); */
-        box-shadow:
-            rgba(200, 200, 0, 0.5) -5px -5px 20px 0px,
-            rgba(0, 0, 0, 0.5) 0px 13px 20px 0px,
-            rgba(200, 0, 0, 0.5) 8px -8px 10px 0px;
-    }
-}
-
 /* Estilos generales: escritorio */
 .boton {
     padding: 20px 30px;
@@ -393,368 +229,4 @@ ul.galeria figure.img-before {
     color: white;
     font-size: 18px;
     cursor: pointer;
-}
-
-.demo {
-    background: #fff;
-    border: 1px solid #d9deea;
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-
-    & li {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 1.6rem 2.4rem;
-        background: #eef2ff;
-        border-radius: 10px;
-        font-size: 0.8rem;
-        color: #55607a;
-
-        & span {
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #2f5bff;
-            color: #fff;
-            display: grid;
-            place-items: center;
-            /* font-size: 0.75rem; */
-            font-weight: 700;
-
-            /* Transicion */
-            transition: transform 0.5s ease;
-        }
-        &:hover span {
-            &.translate {
-                /* transform: translate(50px); */
-                transform: translate(2rem, 2rem);
-            }
-            &.rotate {
-                transform: rotate(45deg);
-            }
-            &.scale {
-                transform: scale(1.5);
-            }
-        }
-    }
-}
-
-article.carrousel-container {
-    min-height: 100vh;
-
-    & ul.carrousel {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-
-        list-style-type: none;
-
-        border-radius: 0.8rem;
-        box-shadow: 1em 1em 1em #00000080;
-
-        & li {
-            width: 100%;
-            height: 100%;
-
-            flex-shrink: 0;
-
-            & figure {
-                width: 100%;
-                height: 100%;
-
-                & figcaption {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    padding: 1rem;
-
-                    text-align: center;
-                    background: linear-gradient(to top, #00000070, transparent);
-                    color: #fff;
-
-                    text-shadow: 1px 1px 2px #000;
-                }
-            }
-        }
-
-        & li figure {
-            background-color: lime;
-        }
-
-        & li figure.diapositiva-1::before {
-            background-image: var(--carrousel-1--thumb);
-        }
-
-        & li figure.diapositiva-2::before {
-            background-image: var(--carrousel-2--thumb);
-        }
-
-        & li figure.diapositiva-3::before {
-            background-image: var(--carrousel-3--thumb);
-        }
-
-        & li figure.diapositiva-4::before {
-            background-image: var(--carrousel-4--thumb);
-        }
-
-        & li figure.diapositiva-5::before {
-            background-image: var(--carrousel-5--thumb);
-        }
-    }
-}
-
-/* Animación */
-
-/* Animación */
-
-ul.carrousel {
-    & li {
-        /* Nombre duración y curva */
-        animation: wuSimpleCarrousel 20s infinite ease-in-out;
-
-        /* Avisa al navegador para que use la aceleración por GPU */
-        will-change: transform;
-    }
-
-    &:hover li {
-        /* Pausar animación al pasar el cursor sobre la galería */
-        animation-duration: 10s;
-    }
-}
-
-/* --- Keyframes para el desplazamiento con Flexbox --- */
-@keyframes wuSimpleCarrousel {
-    0%,
-    15% {
-        transform: translate3d(0%, 0, 0);
-    }
-    20%,
-    35% {
-        transform: translate3d(-100%, 0, 0);
-    }
-    40%,
-    55% {
-        transform: translate3d(-200%, 0, 0);
-    }
-    60%,
-    75% {
-        transform: translate3d(-300%, 0, 0);
-    }
-    80%,
-    95% {
-        transform: translate3d(-400%, 0, 0);
-    }
-    100% {
-        transform: translate3d(0%, 0, 0);
-    }
-}
-
-/* Texto generado por CSS */
-.boton::before {
-    content: "media (max-width: 599px)";
-}
-
-/* TABLETA: hasta 900 px */
-@media screen and (max-width: 900px) {
-    .boton {
-        background-color: #ffc107;
-        color: #222;
-    }
-
-    .boton::before {
-        content: "Tableta: @media (max-width: 900px)";
-    }
-}
-
-/* MÓVIL: hasta 600 px */
-@media screen and (max-width: 600px) {
-    .boton {
-        background-color: #dc3545;
-        color: white;
-    }
-
-    .boton::before {
-        content: "Móvil: @media (max-width: 600px)";
-    }
-}
-article.galeria-flex {
-    background-color: lime;
-}
-ul.galeria {
-    & .diapositiva-1 {
-        &::before {
-            background-image: var(--galeria-1--thumb);
-        }
-    }
-
-    & .diapositiva-2 {
-        &::before {
-            background-image: var(--galeria-2--thumb);
-        }
-    }
-
-    & .diapositiva-3 {
-        &::before {
-            background-image: var(--galeria-3--thumb);
-        }
-    }
-
-    & .diapositiva-4 {
-        &::before {
-            background-image: var(--galeria-4--thumb);
-        }
-    }
-
-    & .diapositiva-5 {
-        &::before {
-            background-image: var(--galeria-5--thumb);
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    article.galeria-flex {
-        background-color: tomato;
-    }
-
-    ul.galeria {
-        & .diapositiva-1 {
-            &::before {
-                background-image: var(--galeria-1--medium);
-            }
-        }
-
-        & .diapositiva-2 {
-            &::before {
-                background-image: var(--galeria-2--medium);
-            }
-        }
-
-        & .diapositiva-3 {
-            &::before {
-                background-image: var(--galeria-3--medium);
-            }
-        }
-
-        & .diapositiva-4 {
-            &::before {
-                background-image: var(--galeria-4--medium);
-            }
-        }
-
-        & .diapositiva-5 {
-            &::before {
-                background-image: var(--galeria-5--medium);
-            }
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    article.galeria-flex {
-        background-color: blue;
-    }
-
-    ul.galeria {
-        & .diapositiva-1 {
-            &::before {
-                background-image: var(--galeria-1--large);
-            }
-        }
-
-        & .diapositiva-2 {
-            &::before {
-                background-image: var(--galeria-2--large);
-            }
-        }
-
-        & .diapositiva-3 {
-            &::before {
-                background-image: var(--galeria-3--large);
-            }
-        }
-
-        & .diapositiva-4 {
-            &::before {
-                background-image: var(--galeria-4--large);
-            }
-        }
-
-        & .diapositiva-5 {
-            &::before {
-                background-image: var(--galeria-5--large);
-            }
-        }
-    }
-}
-
-@media (orientation: landscape) {
-    article.carrousel-container {
-        & ul.carrousel {
-            width: 60%;
-        }
-    }
-}
-
-@media (min-width: 480px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--medium);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--medium);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--medium);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--medium);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--medium);
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--medium-large);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--medium-large);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--medium-large);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--medium-large);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--medium-large);
-            }
-        }
-    }
 }
