@@ -24,6 +24,7 @@
 
         <!-- Ruta a las hojas de estilos -->
         <link rel="stylesheet" href="assets/css/images.css" />
+        <link rel="stylesheet" href="assets/css/menu.css" />
         <link rel="stylesheet" href="assets/css/carrousel.css" />
         <link rel="stylesheet" href="assets/css/variables.css" />
         <link rel="stylesheet" href="assets/css/fonts.css" />
@@ -36,8 +37,41 @@
     </head>
 
     <body>
-        <header></header>
-        <nav></nav>
+        <header>
+            <a href="#" class="no-border" title="Página principal">
+                <figure class="logo"></figure>
+                <h1 class="pechado">Elaboración de hojas de estilos (UF1303)</h1>
+            </a>
+            <!-- Slogan -->
+            <p class="pechado">Curso de Confección Publicación de Páginas Web</p>
+        </header>
+        <nav class="principal" aria-label="Navegación principal">
+            <h2 class="pechado">Menú Principal</h2>
+            <input id="icon-menu" name="icon-menu" type="checkbox" />
+            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Temas</a>
+                    <ul>
+                        <li>
+                            <a href="textos.html">Textos</a>
+                        </li>
+                        <li>
+                            <a href="imagenes.html">Imagenes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
         <main class="agua">
             <section>
                 <header class="img-before portada">
